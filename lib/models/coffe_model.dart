@@ -11,24 +11,24 @@ class CoffeModel {
 }
 
 //Factory CoffeModelItems
-class CoffeModelItems {
+class CoffeModelItem {
   String image;
   String name;
   String price;
   String description;
 
-  CoffeModelItems(
+  CoffeModelItem(
     this.image,
     this.name,
     this.price,
     this.description,
   );
 
-  factory CoffeModelItems.fromJson(Map<String, dynamic> json) {
-    return CoffeModelItems(
-      json['image'],
+  factory CoffeModelItem.fromJson(Map<String, dynamic> json) {
+    return CoffeModelItem(
+      json['images'],
       json['name'],
-      json['price'],
+      json['price'].toString(),
       json['description'],
     );
   }
