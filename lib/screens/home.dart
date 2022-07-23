@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, avoid_unnecessary_containers
 
 import 'package:app1/config/app.dart';
+import 'package:app1/widgets/adds.dart';
 import 'package:app1/widgets/coffe/list.dart';
 import 'package:flutter/material.dart';
 
@@ -45,8 +46,8 @@ class _HomePageState extends State<HomePage> {
               Align(
                 alignment: Alignment.topLeft,
                 child: Text(
-                  'Find the Best coffe for you',
-                  style: TextStyle(fontSize: 25),
+                  'Find the best \ncoffee for you',
+                  style: TextStyle(fontSize: 37),
                   textAlign: TextAlign.start,
                 ),
               ),
@@ -62,12 +63,24 @@ class _HomePageState extends State<HomePage> {
               ),
             ]),
           ),
+
           SizedBox(height: 25),
+
+          //Body views
           Expanded(
             child: ListView(
-              padding: const EdgeInsets.all(10),
+              padding: const EdgeInsets.symmetric(horizontal: 10),
               children: [
-                CoffeList(),
+                //Coffe List
+                Container(
+                  alignment: Alignment.topLeft,
+                  height: 320,
+                  child: CoffeList(),
+                ),
+
+                //Adds area
+                AddsWidget(),
+                SizedBox(height: 10),
               ],
             ),
           )
