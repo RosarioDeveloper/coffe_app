@@ -2,6 +2,7 @@
 
 import 'package:app1/config/app.dart';
 import 'package:app1/screens/home.dart';
+import 'package:app1/shared/colors.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Container(
         decoration: BoxDecoration(
-          color: Color(App.dark),
+          color: AppColors.dark,
         ),
         child: HomePage(),
       ),
