@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, avoid_unnecessary_containers, sized_box_for_whitespace
 
 import 'package:app1/config/app.dart';
+import 'package:app1/models/coffe_model.dart';
 import 'package:flutter/material.dart';
 
 class Item {
@@ -10,7 +11,8 @@ class Item {
 }
 
 class CoffeItem extends StatelessWidget {
-  const CoffeItem({Key? key}) : super(key: key);
+  CoffeModelItem coffe;
+  CoffeItem({Key? key, required this.coffe}) : super(key: key);
 
   /* final Item data;
   final List<Item> item = <Item>[]; */
@@ -34,7 +36,7 @@ class CoffeItem extends StatelessWidget {
           ClipRRect(
             borderRadius: BorderRadius.circular(20),
             child: Image.asset(
-              'lib/assets/images/coffe1.jpeg',
+              'lib/assets/images/${coffe.image}',
               fit: BoxFit.cover,
               width: size.width,
               height: 140,
@@ -46,11 +48,11 @@ class CoffeItem extends StatelessWidget {
           //Title and descriotion
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: const [
-              Text('Capuccino', style: TextStyle(fontSize: 17)),
+            children: [
+              Text(coffe.name, style: TextStyle(fontSize: 17)),
               SizedBox(height: 2),
               Text(
-                'With Oat Milk',
+                coffe.description,
                 style: TextStyle(color: Color(App.dark50), fontSize: 12),
               ),
             ],
@@ -67,13 +69,13 @@ class CoffeItem extends StatelessWidget {
               children: [
                 //Price
                 Row(
-                  children: const [
+                  children: [
                     Text(
-                      '\$',
+                      '\$ ',
                       style: TextStyle(fontSize: 18, color: Color(App.primary)),
                     ),
                     Text(
-                      ' 4.20',
+                      coffe.price,
                       style: TextStyle(
                         fontSize: 17,
                         fontWeight: FontWeight.bold,
