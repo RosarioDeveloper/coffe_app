@@ -1,8 +1,9 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, avoid_unnecessary_containers
 
-import 'package:app1/config/app.dart';
-import 'package:app1/widgets/adds.dart';
-import 'package:app1/widgets/coffe/list.dart';
+import 'package:app1/shared/app.dart';
+import 'package:app1/screens/coffe/coffe_list.dart';
+import 'package:app1/shared/widgets/adds.dart';
+
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
