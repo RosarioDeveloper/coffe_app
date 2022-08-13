@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_constructors, avoid_unnecessary_containers, sized_box_for_whitespace
 
-import 'package:app1/shared/app.dart';
-import 'package:app1/models/coffe_model.dart';
+import 'package:app1/screens/coffe/coffe_model.dart';
+import 'package:app1/shared/colors.dart';
 import 'package:flutter/material.dart';
 
 class Item {
@@ -26,7 +26,7 @@ class CoffeItem extends StatelessWidget {
       padding: EdgeInsets.all(15),
       margin: EdgeInsets.symmetric(horizontal: 5),
       decoration: BoxDecoration(
-        color: const Color(App.dark80),
+        color: AppColors.dark80,
         borderRadius: BorderRadius.circular(20),
       ),
       child: Column(
@@ -36,7 +36,7 @@ class CoffeItem extends StatelessWidget {
           ClipRRect(
             borderRadius: BorderRadius.circular(20),
             child: Image.asset(
-              'lib/assets/images/${coffe.image}',
+              'assets/images/${coffe.image}',
               fit: BoxFit.cover,
               width: size.width,
               height: 140,
@@ -53,7 +53,7 @@ class CoffeItem extends StatelessWidget {
               SizedBox(height: 2),
               Text(
                 coffe.description,
-                style: TextStyle(color: Color(App.dark50), fontSize: 12),
+                style: TextStyle(color: AppColors.dark50, fontSize: 12),
               ),
             ],
           ),
@@ -72,10 +72,10 @@ class CoffeItem extends StatelessWidget {
                   children: [
                     Text(
                       '\$ ',
-                      style: TextStyle(fontSize: 18, color: Color(App.primary)),
+                      style: TextStyle(fontSize: 18, color: AppColors.primary),
                     ),
                     Text(
-                      coffe.price,
+                      coffe.price.toString(),
                       style: TextStyle(
                         fontSize: 17,
                         fontWeight: FontWeight.bold,
@@ -88,7 +88,7 @@ class CoffeItem extends StatelessWidget {
                 Container(
                   padding: EdgeInsets.all(3),
                   decoration: BoxDecoration(
-                    color: Color(App.primary),
+                    color: AppColors.primary,
                     shape: BoxShape.rectangle,
                     borderRadius: BorderRadius.circular(8),
                   ),
