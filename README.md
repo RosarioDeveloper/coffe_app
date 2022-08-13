@@ -1,6 +1,10 @@
-# app1
+# Coffe App
 
-A new Flutter project.
+This a flutter app coffe UI
+
+# Preview 
+<img src="./screenshots/splash.png" width="250" height="500"> <img src="./screenshots/home.png" width="250" height="500">
+<img src="./screenshots/details.png" width="250" height="500">
 
 ## Getting Started
 
