@@ -17,18 +17,21 @@ class MyApp extends StatelessWidget {
   final GoRouter _router = GoRouter(
     routes: <GoRoute>[
       GoRoute(
+        name: 'Splash',
         path: '/',
         builder: (BuildContext context, GoRouterState state) {
           return SplashPage();
         },
       ),
       GoRoute(
+        name: 'home',
         path: '/home',
         builder: (BuildContext context, GoRouterState state) {
           return HomePage();
         },
       ),
       GoRoute(
+        name: 'Details',
         path: '/coffe/details',
         builder: (BuildContext context, GoRouterState state) {
           final extra = state.extra as dynamic;
