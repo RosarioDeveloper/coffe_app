@@ -19,16 +19,12 @@ class _CoffeDetailsState extends State<CoffeDetails> {
   late CoffeModelItem? _coffe;
 
   @override
-  void initState() {
-    super.initState();
-    _coffe = widget.coffe;
-  }
-
-  @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     const double radiusImage = 25;
     final double imageheight = size.height * 0.58;
+
+    _coffe = widget.coffe;
 
     if (_coffe == null) return Scaffold();
 
