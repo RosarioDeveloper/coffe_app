@@ -1,4 +1,3 @@
-import 'package:app1/shared/app.dart';
 import 'package:flutter/material.dart';
 
 class SearchInput extends StatelessWidget {
@@ -6,7 +5,7 @@ class SearchInput extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return TextField(
+    return const TextField(
       decoration: InputDecoration(
         prefixIcon: Icon(
           Icons.search,
