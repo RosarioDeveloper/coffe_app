@@ -1,4 +1,4 @@
-import 'package:app1/shared/app.dart';
+import 'package:app1/shared/colors.dart';
 import 'package:flutter/material.dart';
 
 class AddsWidget extends StatelessWidget {
@@ -24,7 +24,7 @@ class AddsWidget extends StatelessWidget {
           padding: const EdgeInsets.all(15),
           margin: const EdgeInsets.symmetric(horizontal: 5),
           decoration: BoxDecoration(
-            color: const Color(App.dark80),
+            color: AppColors.dark80,
             borderRadius: BorderRadius.circular(20),
           ),
           child: Row(
@@ -34,7 +34,7 @@ class AddsWidget extends StatelessWidget {
               ClipRRect(
                 borderRadius: BorderRadius.circular(20),
                 child: Image.asset(
-                  'lib/assets/images/coffe1.jpeg',
+                  'assets/images/coffe1.jpeg',
                   fit: BoxFit.cover,
                   width: .30 * size.width,
                   height: 140,
@@ -54,12 +54,12 @@ class AddsWidget extends StatelessWidget {
                   SizedBox(height: 2),
                   Text(
                     'With Oat Milk',
-                    style: TextStyle(color: Color(App.dark50), fontSize: 12),
+                    style: TextStyle(color: AppColors.dark50, fontSize: 12),
                   ),
                   SizedBox(height: 20),
                   Text(
                     'From \$01.00',
-                    style: TextStyle(color: Color(App.primary), fontSize: 20),
+                    style: TextStyle(color: AppColors.primary, fontSize: 20),
                   ),
                 ],
               ),
