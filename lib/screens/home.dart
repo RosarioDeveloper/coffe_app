@@ -1,6 +1,6 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, avoid_unnecessary_containers
 
-import 'package:app1/shared/app.dart';
+import 'package:app1/shared/theme.dart';
 import 'package:app1/screens/coffe/coffe_list.dart';
 import 'package:app1/shared/widgets/adds.dart';
 
@@ -20,11 +20,21 @@ class _HomePageState extends State<HomePage> {
 
     return Scaffold(
       appBar: AppBar(
-        leading: Icon(Icons.menu),
+        leading: Container(
+          //padding: EdgeInsets.only(left: 10),
+          child: IconButton(
+            icon: Icon(Icons.grid_view_rounded),
+            onPressed: () {},
+          ),
+        ),
         actions: [
           Padding(
             padding: EdgeInsets.only(right: App.padding),
-            child: Icon(Icons.person),
+            child: CircleAvatar(
+              backgroundImage: AssetImage(
+                'assets/images/user_avatar.jpeg',
+              ),
+            ),
           ),
         ],
       ),
